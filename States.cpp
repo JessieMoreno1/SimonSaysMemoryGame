@@ -1,5 +1,5 @@
 //
-// Created by Jessie Mejia on 12/9/22.
+// Created by Jessie Mejia on 12/14/22.
 //
 
 #include "States.h"
@@ -34,4 +34,3 @@ void States::load() {
         map[static_cast<StatesEnum>(i)] = false;
     }
 }
-

@@ -1,9 +1,10 @@
 //
-// Created by Jessie Mejia on 12/9/22.
+// Created by Jessie Mejia on 12/14/22.
 //
 
-#ifndef SIMONSAYS_MOUSEEVENTS_CPP
-#define SIMONSAYS_MOUSEEVENTS_CPP
+
+#ifndef SIMONSAYSFINAL_MOUSEEVENTS_CPP
+#define SIMONSAYSFINAL_MOUSEEVENTS_CPP
 
 #include "MouseEvents.h"
 
@@ -22,7 +23,5 @@ template<class T>
 bool MouseEvents::isNotClick(const T &Obj, const sf::RenderWindow &window) {
     return !isHover(Obj, window) && sf::Mouse::isButtonPressed(sf::Mouse::Left);
 }
-
-
 
 #endif

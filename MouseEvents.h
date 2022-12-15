@@ -1,13 +1,12 @@
 //
-// Created by Jessie Mejia on 12/9/22.
+// Created by Jessie Mejia on 12/14/22.
 //
 
-#ifndef SIMONSAYS_MOUSEEVENTS_H
-#define SIMONSAYS_MOUSEEVENTS_H
+#ifndef SIMONSAYSFINAL_MOUSEEVENTS_H
+#define SIMONSAYSFINAL_MOUSEEVENTS_H
+
 
 #include <SFML/Graphics.hpp>
-#include "Squares.h"
-
 
 class MouseEvents {
 public:
@@ -25,4 +24,4 @@ public:
 
 #include "MouseEvents.cpp"
 
-#endif //SIMONSAYS_MOUSEEVENTS_H
+#endif //SIMONSAYSFINAL_MOUSEEVENTS_H

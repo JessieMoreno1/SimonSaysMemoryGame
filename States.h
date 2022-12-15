@@ -1,18 +1,16 @@
 //
-// Created by Jessie Mejia on 12/9/22.
+// Created by Jessie Mejia on 12/14/22.
 //
 
-#ifndef SIMONSAYS_STATES_H
-#define SIMONSAYS_STATES_H
+#ifndef SIMONSAYSFINAL_STATES_H
+#define SIMONSAYSFINAL_STATES_H
 
 #include <SFML/Graphics.hpp>
 #include <map>
 #include "StatesEnum.h"
 
 class States {
-
 private:
-
     std::map<StatesEnum, bool> map;
     void load();
 public:
@@ -25,4 +23,4 @@ public:
 };
 
 
-#endif //SIMONSAYS_STATES_H
+#endif //SIMONSAYSFINAL_STATES_H

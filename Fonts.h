@@ -1,9 +1,9 @@
 //
-// Created by Jessie Mejia on 12/9/22.
+// Created by Jessie Mejia on 12/14/22.
 //
 
-#ifndef SIMONSAYS_FONTS_H
-#define SIMONSAYS_FONTS_H
+#ifndef SIMONSAYSFINAL_FONTS_H
+#define SIMONSAYSFINAL_FONTS_H
 
 #include "FontsEnum.h"
 #include <SFML/Graphics.hpp>
@@ -19,4 +19,4 @@ public:
 };
 
 
-#endif //SIMONSAYS_FONTS_H
+#endif //SIMONSAYSFINAL_FONTS_H

@@ -1,45 +1,27 @@
 //
-// Created by Jessie Mejia on 12/11/22.
+// Created by Jessie Mejia on 12/14/22.
 //
 
-#ifndef SIMONSAYS_GAME_H
-#define SIMONSAYS_GAME_H
+#ifndef SIMONSAYSFINAL_GAME_H
+#define SIMONSAYSFINAL_GAME_H
 
-#include "iostream"
-#include <cstdlib>
-#include "SFML/Graphics.hpp"
-#include "Squares.h"
-#include "vector"
+#include <SFML/Graphics.hpp>
+#include <vector>
 #include "States.h"
-#include "Fonts.h"
-#include "MouseEvents.h"
 
-class Game : public sf::Drawable, public States  {
+class Game : public sf::RectangleShape, public States{
 public:
-
-    Squares s1, s2, s3, s4;
-    Game();
+    Game(sf::RenderWindow& window);
     void init();
-    void loopGame();
-
-protected:
-    void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 
 private:
-    std::vector<Squares> Pattern;
-    std::vector<Squares> SquareHolder;
-    sf::Text level;
-    sf::Text levelNum;
-    sf::Text Score;
-    sf::Text scoreNum;
+    sf::RectangleShape flashingSquare, squareOne, squareTwo, squareThree, squareFour;
 
 
 
-
-
+protected:
+    void draw(sf::RenderTarget &target, sf::RenderStates states) const ;
 };
 
 
-
-
-#endif //SIMONSAYS_GAME_H
+#endif //SIMONSAYSFINAL_GAME_H
