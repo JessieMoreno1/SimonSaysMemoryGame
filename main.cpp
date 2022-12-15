@@ -9,7 +9,7 @@
 
 int main() {
 
-     sf::RectangleShape flashingSquare, squareOne, squareTwo, squareThree, squareFour;
+     // sf::RectangleShape flashingSquare, squareOne, squareTwo, squareThree, squareFour;
 
      // create a vector of the available colors
      std::vector<sf::Color> availableColors = { sf::Color::Blue, sf::Color::Red, sf::Color::Yellow, sf::Color::Green};
@@ -51,7 +51,7 @@ int main() {
     MainMenu m(window);
     Game g(window);
     g.setState(HIDDEN, true);
-
+    bool pressed = false;
     while (window.isOpen())
     {
 
@@ -64,27 +64,27 @@ int main() {
             }
 
 
-            if (MouseEvents::isClick(squareOne, window))
+            if (MouseEvents::isClick(g.getSquareOne(), window))
             {
                 std::cout << "Blue square clicked\n";
                 playerInput.push_back(sf::Color::Blue);
                 // std::cout << playerInput.size() << std::endl;
             }
-            if (MouseEvents::isClick(squareTwo, window))
+            if (MouseEvents::isClick(g.getSquareTwo(), window))
             {
                 std::cout << "Red square clicked\n";
                 playerInput.push_back(sf::Color::Red);
                 // std::cout << playerInput.size()<< std::endl;
 
             }
-            if (MouseEvents::isClick(squareThree, window))
+            if (MouseEvents::isClick(g.getSquareThree(), window))
             {
                 std::cout << "Yellow square clicked\n";
                 playerInput.push_back(sf::Color::Yellow);
                 // std::cout << playerInput.size()<< std::endl;
 
             }
-            if (MouseEvents::isClick(squareFour, window))
+            if (MouseEvents::isClick(g.getSquareFour(), window))
             {
                 std::cout << "Green square clicked\n";
                 playerInput.push_back(sf::Color::Green);
@@ -94,6 +94,7 @@ int main() {
 
             if (MouseEvents::isClick(m.getStartText(), window))
             {
+                pressed = true;
                 m.enableState(HIDDEN);
                 g.toggleState(HIDDEN);
             }
@@ -110,17 +111,17 @@ int main() {
             colorSequence.push_back(newColor);
         }
 
-        // Play the sequence of colors
-        for (const sf::Color& color : colorSequence)
-        {
-            if (clock.getElapsedTime().asSeconds() >= 1.0f)
-            {
-                // flash the color on the screen
-                flashingSquare.setFillColor(color);
-                clock.restart();
+        if (pressed) {
+            // Play the sequence of colors
+            for (const sf::Color &color: colorSequence) {
+                if (clock.getElapsedTime().asSeconds() >= 1.0f) {
+                    // flash the color on the screen
+                    g.getFlashingSquare().setFillColor(color);
+                    std::cout << "Printing colors";
+                    clock.restart();
+                }
             }
         }
-
         // check the players input and compare it to the sequence
         bool correctSequence = true;
 

@@ -4,7 +4,10 @@
 
 #include "Game.h"
 
+
 void Game::init() {
+    //sf::RectangleShape flashingSquare, squareOne, squareTwo, squareThree, squareFour;
+
     flashingSquare.setSize({100,100});
     flashingSquare.setPosition({570,200});
 
@@ -37,4 +40,24 @@ void Game::draw(sf::RenderTarget &target, sf::RenderStates states) const {
         target.draw(squareThree);
         target.draw(squareFour);
     }
+}
+
+sf::RectangleShape Game::getFlashingSquare() {
+    return flashingSquare;
+}
+
+sf::RectangleShape Game::getSquareOne() {
+    return squareOne;
+}
+
+sf::RectangleShape Game::getSquareTwo() {
+    return squareTwo;
+}
+
+sf::RectangleShape Game::getSquareThree() {
+    return squareThree;
+}
+
+sf::RectangleShape Game::getSquareFour() {
+    return squareFour;
 }

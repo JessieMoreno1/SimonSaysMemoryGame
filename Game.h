@@ -9,13 +9,20 @@
 #include <vector>
 #include "States.h"
 
-class Game : public sf::RectangleShape, public States{
+class Game : public sf::Drawable, public States{
 public:
     Game(sf::RenderWindow& window);
     void init();
 
+    sf::RectangleShape getFlashingSquare();
+    sf::RectangleShape getSquareOne();
+    sf::RectangleShape getSquareTwo();
+    sf::RectangleShape getSquareThree();
+    sf::RectangleShape getSquareFour();
+
+
 private:
-    sf::RectangleShape flashingSquare, squareOne, squareTwo, squareThree, squareFour;
+   sf::RectangleShape flashingSquare, squareOne, squareTwo, squareThree, squareFour;
 
 
 
